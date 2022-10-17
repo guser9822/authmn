@@ -1,1 +1,13 @@
-
+app:
+  host: http://localhost:8080
+  oauth:
+    clientId: "clientId"
+    secret: "clientSecret"
+    redirectEndpoint: /authenticate/authcode
+    tokenServerEncodedUrl: https://oauth2.googleapis.com/token
+    googleApiHost: https://www.googleapis.com
+    idTokenApi: /oauth2/v3/tokeninfo
+    scopes:
+      #Keep both these scopes to see email information using the access token or token info api
+      - openid
+      - https://www.googleapis.com/auth/userinfo.email
